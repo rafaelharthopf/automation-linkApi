@@ -1,31 +1,7 @@
 const cron = require('node-cron');
 const axios = require('axios');
-
-/*const mongoDb = require('mongoose');;
-await mongoose.connect('mongodb+srv://rafalinkApi:Bavarias@1@cluster0.xeb4s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-)
-
-
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
-
-
-const userSchema = new Schema({
-    fullName: String,
-    email: String,
-    address: String,
-    addressNumber: String,
-    phoneNumber: String
-});
-
-const UserModel = mongoose.model('UserModel', userSchema);
-*/
-
 const {promisify} = require('util');
-
 const sleep = promisify(setTimeout);
-
-
 
 cron.schedule ('* */2 * * * ', async () => {
 
